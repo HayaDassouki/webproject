@@ -3,18 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --emerald-color: rgb(30, 51, 30);
+    --gold-color: rgb(182, 182, 40);
+}
 body {
-    background-color: #033003;
-    color: #d4af37; 
+    background-color: white;
+    color: black; 
     font-family: Arial, sans-serif;
     margin: 0;
 }
-
 header {
-    padding: 20px;
     text-align: center;
 }
-
 .nav-container {
     display: flex;
     align-items: center;
@@ -51,7 +52,9 @@ nav ul li a:hover {
     font-size: 16px;
     border-radius: 5px;
 }
-
+#shop h2{
+    text-align: center;
+}
 h1 {
     margin-bottom: 10px;
 }
@@ -70,15 +73,41 @@ main {
     position: relative;
     margin: 10px;
     text-align: center;
+    height: 300px;
+    width: 300px;
+    
+}
+.image-item1{
+    background-image: url(images/newrelease1.jfif);
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+.image-item2{
+    background-image: url(images/newrelease2.jfif);
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+.image-item3{
+    background-image: url(images/newrelease3.jpg);
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+.image-item4{
+    background-image: url(images/newrelease4.jpg);
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
 }
 
 .image-item img {
-    width: 250px;
-    height: auto;
-    border: 2px solid #d4af37; 
+    width: 350px;
+    /*border: 2px solid #d4af37; */
 }
 
-.add-to-cart {
+/*.add-to-cart {
     background-color: #d4af37;
     color: #004d00; 
     border: none;
@@ -86,7 +115,7 @@ main {
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
-}
+}*/
 
 footer {
     text-align: center;
