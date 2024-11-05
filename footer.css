@@ -1,30 +1,92 @@
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003300; 
-}
-
-.categories a {
-    color: #d4af37; 
-    margin: 0 10px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.categories a:hover {
-    text-decoration: underline;
-}
-.Overview a{
-    color: #d4af37; 
-    margin: 0 10px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--emerald-color);
+    color: white;
 }
 .foot{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 30px;
+}
+.vfoot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    font-size: 18px;
+}
+
+.categories, .overview{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    margin-top: 4px;
+}
+#cnt{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+}
+.categories a, .overview a, .contact a, .vfoot a{
+    color: white; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.categories a:hover,.overview a:hover, .contact a:hover , .vfoot a:hover{
+    text-decoration: underline;
+}
+#phone, #email, #location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+#phone img, #email img, #location img{
+    width: 18px;
+}
+.apps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.apps a:hover{
+    transform: scale(1.2);
+}
+#app1{
+    width: 21px;
+}
+#app2{
+    width: 26px;
+}
+#app3{
+    width: 18px;
+}
+hr{
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+#copy{
+    text-align: center;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 614px)
+{
+    .foot{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 40px;
+    }
 }

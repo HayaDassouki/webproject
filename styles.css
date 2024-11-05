@@ -7,6 +7,54 @@
     --emerald-color: rgb(30, 51, 30);
     --gold-color: rgb(182, 182, 40);
 }
+#cover{
+    background-image: url(images/cover.jfif);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+#cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(58, 56, 56, 0.5); 
+    z-index: 1; 
+}
+#covertxt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    color: white;
+    position: relative; 
+    z-index: 3;
+}
+#covertxt p{
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#covertxt button{
+    padding: 10px;
+    width: 110px;
+    height: 40px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--emerald-color);
+}
+#covertxt button a{
+    text-decoration: none;
+    color: white;
+}
+#covertxt button:hover{
+    transform: scale(1.04);
+}
 body {
     background-color: white;
     color: black; 
