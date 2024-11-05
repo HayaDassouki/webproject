@@ -13,6 +13,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+#shop h2{
+    text-align: center;
+}
+h1 {
+    margin-bottom: 10px;
+}
 main {
     padding: 20px;
 }
