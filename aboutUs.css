@@ -4,11 +4,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
-  
-  body {
-    color: #333;
-    background-color: #f9f9f9;
-  }
 
   .header {
     background-color: rgb(14, 91, 14);
@@ -106,14 +101,3 @@
     color: #777;
   }
   
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgb(14, 91, 14);
-    color: white;
-  }
-  
-  .footer p {
-    font-size: 0.875rem;
-  }
