@@ -4,17 +4,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
-
-  .header {
-    background-color: rgb(14, 91, 14);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-  }
-  
-  .header h1 {
-    font-size: 2.5rem;
-  }
   .over1{
     z-index: 1;
     width: 200px;
