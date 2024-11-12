@@ -25,9 +25,21 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
 }
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a::after{
+content: '' ;
+height: 3px; 
+width: 0%; 
+background: white;
+position: absolute;
+left: 0;
+bottom: -5px;
+transition: 0.5s;
+}
+nav ul li a:hover::after{
+width: 100%;
 }
 .hamburger{
     display:none;
