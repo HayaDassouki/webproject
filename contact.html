@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="contact.css">
   
 </head>
-
 <body>
     <header>
         <div class="nav-container">
-            <h3>Jewelry Store</h3>
+            <div id="logo">
+                <img src="/images/Logo.PNG" alt="">
+             </div>
             <div class="hamburger">
                 <span></span><span></span><span></span>
             </div>
@@ -31,26 +32,33 @@
                 <img id="carticon" src="images/cart.png" alt="">
             </div>
         </div>
+            <div id="cover">
+                <div id="covertxt">
+                    <h1>Contact Us</h1>
+                    <p>We’re here to answer your questions, hear your feedback,<br> and help you get the most out of your experience.</p>
+                </div>
+            </div>
     </header>
-
     <main>
-        <section class="contact-section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or need assistance, feel free to reach out to us!</p>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+        <section class="sec1">
+            <h2>We’re always here to assist!</h2>
+            <div class="form">
+                <form action="#" method="post">
+                    <div id="form">
+                        <input type="text" id="name" name="name"  placeholder="Your Name" required>
+                        <input type="text" id="num" name="num" placeholder="Your Number" required>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Leave a Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div>
+                    <img src="images/The Thick Chain Necklace Is Quickly Replacing Your Usually Dainty Jewelry.jfif" alt="">
+                </div>
+            </div>
         </section>
     </main>
+    
 
     <footer>
         <div class="foot">

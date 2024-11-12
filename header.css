@@ -12,6 +12,9 @@ header {
     width: 100%;
     z-index: 5;
 }
+#logo img{
+    width: 100px;
+}
 nav ul {
     list-style-type: none;
     display: flex;
@@ -27,19 +30,20 @@ nav ul li a {
     text-decoration: none;
     position: relative;
     display: inline-block;
+    font-family:Arial, Helvetica, sans-serif
 }
 nav ul li a::after{
-content: '' ;
-height: 3px; 
-width: 0%; 
-background: white;
-position: absolute;
-left: 0;
-bottom: -5px;
-transition: 0.5s;
+    content: '' ;
+    height: 3px; 
+    width: 0%; 
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
 }
 nav ul li a:hover::after{
-width: 100%;
+    width: 100%;
 }
 .hamburger{
     display:none;
@@ -61,6 +65,9 @@ width: 100%;
 {
     .nav-container nav,.nav-container h3{
         display:none;
+    }
+    #logo{
+        display: none;
     }
     .hamburger{
         display: flex;
@@ -86,3 +93,4 @@ width: 100%;
     width: 20px;
     height: 20px;
 }
+
