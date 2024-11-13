@@ -65,7 +65,7 @@ main {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 .image-item{
@@ -86,4 +86,9 @@ main {
 }
 #new4{
     background-image: url(images/newrelease4.jpg);
+}
+@media screen and (max-width: 667px){
+    .image-gallery{
+        flex-direction: column;
+    }
 }
