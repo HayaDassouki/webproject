@@ -15,7 +15,9 @@ footer {
     gap: 7px;
     font-size: 18px;
 }
-
+#logofooter img{
+    width: 100px;
+}
 .categories, .overview{
     display: flex;
     flex-direction: column;
