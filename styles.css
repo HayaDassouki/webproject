@@ -8,7 +8,7 @@
     --gold-color: rgb(182, 182, 40);
 }
 #cover{
-    background-image: url(images/cover.jfif);
+    background-image: url(images/homeimgs/cover.jfif);
     height: 450px;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -76,16 +76,16 @@ main {
     background-size: cover;
 }
 #new1{
-    background-image: url(images/newrelease1.jfif);
+    background-image: url(images/homeimgs/newrelease1.jfif);
 }
 #new2{
-    background-image: url(images/newrelease2.jfif);
+    background-image: url(images/homeimgs/newrelease2.jfif);
 }
 #new3{
-    background-image: url(images/newrelease3.jpg);
+    background-image: url(images/homeimgs/newrelease3.jpg);
 }
 #new4{
-    background-image: url(images/newrelease4.jpg);
+    background-image: url(images/homeimgs/newrelease4.jpg);
 }
 @media screen and (max-width: 667px){
     .image-gallery{
