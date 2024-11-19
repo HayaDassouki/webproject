@@ -9,7 +9,7 @@
 }
 #cover{
     background-color: var(--emerald-color);
-    height: 450px;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center; 
