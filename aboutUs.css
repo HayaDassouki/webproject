@@ -36,6 +36,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 150px;
+    background-color: rgb(10, 45, 10);
   }
   .Abo p{
     width: 250px;
