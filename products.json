@@ -1,0 +1,340 @@
+[ 
+{
+    "id": 1,
+    "name": "Moon & Star Gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 555,
+    "image": "products/gold/necklaces/gnecklace1.jpg"
+},
+{
+    "id": 2,
+    "name": "Classic Gold Earring",
+    "category": "gold",
+    "type": "earring",
+    "price": 480,
+    "image": "products/gold/earrings/gear1.jpg"
+},
+{
+    "id": 3,
+    "name": "Sleek Gold Ring",
+    "category": "gold",
+    "type": "ring",
+    "price": 750,
+    "image": "products/gold/rings/gr1.jfif"
+},
+{
+    "id": 4,
+    "name": "Chain Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 400,
+    "image": "products/gold/bracelets/gbr1.jfif"
+},
+{
+    "id": 5,
+    "name": "Vintage Gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 620,
+    "image": "products/gold/necklaces/gnecklace3.jpg"
+},
+{
+    "id": 6,
+    "name": "Vanc Leaf Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 380,
+    "image": "products/gold/bracelets/gbr2.jpg"
+},
+{
+    "id": 7,
+    "name": "Sophisticated Gold Earring",
+    "category": "gold",
+    "type": "earring",
+    "price": 500,
+    "image": "products/gold/earrings/gear2.jpg"
+},
+{
+    "id": 8,
+    "name": "Elegant Gold Ring",
+    "category": "gold",
+    "type": "ring",
+    "price": 670,
+    "image": "products/gold/rings/gr2.jpg"
+},
+{
+    "id": 25,
+    "name": "Elegant Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 200,
+    "image": "products/gold/bracelets/gbr6.jpg"
+},
+{
+    "id": 26,
+    "name": "Graceful gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 222,
+    "image": "products/gold/necklaces/gnecklace2.jpg"
+},
+{
+    "id": 27,
+    "name": "Timeless Gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 200,
+    "image": "products/gold/necklaces/gnecklace4.jpg"
+},
+{
+    "id": 28,
+    "name": "Vanc Leaf Gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 500,
+    "image": "products/gold/necklaces/gnecklace5.jpg"
+},
+{
+    "id": 29,
+    "name": "Flower Gold Necklace",
+    "category": "gold",
+    "type": "necklace",
+    "price": 300,
+    "image": "products/gold/necklaces/gnecklace6.jpg"
+},
+{
+    "id": 30,
+    "name": "Petty Gold Earring",
+    "category": "gold",
+    "type": "earring",
+    "price": 100,
+    "image": "products/gold/earrings/gear3.jpg"
+},
+{
+    "id": 31,
+    "name": "Cartier Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 400,
+    "image": "products/gold/bracelets/gbr3.jpg"
+},
+{
+    "id": 32,
+    "name": "Timeless Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 500,
+    "image": "products/gold/bracelets/gbr4.jpg"
+},
+{
+    "id": 33,
+    "name": "Pretty Gold Bracelet",
+    "category": "gold",
+    "type": "bracelet",
+    "price": 500,
+    "image": "products/gold/bracelets/gbr5.jpg"
+},
+{
+    "id": 34,
+    "name": "Wavy Gold Ring",
+    "category": "gold",
+    "type": "ring",
+    "price": 750,
+    "image": "products/gold/rings/gr3.jpg"
+},
+
+{
+    "id": 9,
+    "name": "Sun & Moon Silver Bracelet",
+    "category": "silver",
+    "type": "bracelet",
+    "price": 320,
+    "image": "products/silver/bracelets/sb1.jpg"
+},
+{
+    "id": 10,
+    "name": "Star Silver Necklace",
+    "category": "silver",
+    "type": "necklace",
+    "price": 600,
+    "image": "products/silver/necklaces/sn1.jpg"
+},
+{
+    "id": 11,
+    "name": "Opulent Silver Ring",
+    "category": "silver",
+    "type": "ring",
+    "price": 420,
+    "image": "products/silver/rings/sr1.jpg"
+},
+{
+    "id": 12,
+    "name": "Dazzling Silver Earring",
+    "category": "silver",
+    "type": "earring",
+    "price": 290,
+    "image": "products/silver/earrings/se1.jpg"
+},
+{
+    "id": 13,
+    "name": "Graceful Silver Necklace",
+    "category": "silver",
+    "type": "necklace",
+    "price": 550,
+    "image": "products/silver/necklaces/sn2.jpg"
+},
+{
+    "id": 14,
+    "name": "Modern Silver Bracelet",
+    "category": "silver",
+    "type": "bracelet",
+    "price": 340,
+    "image": "products/silver/bracelets/sb2.jpg"
+},
+{
+    "id": 15,
+    "name": "Brilliant Silver Earring",
+    "category": "silver",
+    "type": "earring",
+    "price": 450,
+    "image": "products/silver/earrings/se2.jpg"
+},
+{
+    "id": 16,
+    "name": "Leaf Silver Ring",
+    "category": "silver",
+    "type": "ring",
+    "price": 310,
+    "image": "products/silver/rings/sr2.jpg"
+},
+{
+    "id": 35,
+    "name": "Layered Silver Necklace",
+    "category": "silver",
+    "type": "necklace",
+    "price": 500,
+    "image": "products/silver/necklaces/sn3.jpg"
+},
+{
+    "id": 36,
+    "name": "Channel Silver Earring",
+    "category": "silver",
+    "type": "earring",
+    "price": 450,
+    "image": "products/silver/earrings/se3.jpg"
+},
+{
+    "id": 37,
+    "name": "Starry Silver Bracelet",
+    "category": "silver",
+    "type": "bracelet",
+    "price": 340,
+    "image": "products/silver/bracelets/sb3.jpg"
+},
+
+{
+    "id": 17,
+    "name": "Radiant Diamond Ring",
+    "category": "diamond",
+    "type": "ring",
+    "price": 950,
+    "image": "products/diamond/rings/dr1.jpg"
+},
+{
+    "id": 18,
+    "name": "Flower Diamond Bracelet",
+    "category": "diamond",
+    "type": "bracelet",
+    "price": 850,
+    "image": "products/diamond/bracelets/db1.jpg"
+},
+{
+    "id": 19,
+    "name": "Exquisite Diamond Necklace",
+    "category": "diamond",
+    "type": "necklace",
+    "price": 990,
+    "image": "products/diamond/necklaces/dn1.jpg"
+},
+{
+    "id": 20,
+    "name": "Glowing Diamond Earring",
+    "category": "diamond",
+    "type": "earring",
+    "price": 675,
+    "image": "products/diamond/earrings/de1.jpg"
+},
+{
+    "id": 21,
+    "name": "Majestic Diamond Bracelet",
+    "category": "diamond",
+    "type": "bracelet",
+    "price": 980,
+    "image": "products/diamond/bracelets/db2.jpg"
+},
+{
+    "id": 22,
+    "name": "Stunning Diamond Ring",
+    "category": "diamond",
+    "type": "ring",
+    "price": 920,
+    "image": "products/diamond/rings/dr2.jpg"
+},
+{
+    "id": 23,
+    "name": "Flower Diamond Earring",
+    "category": "diamond",
+    "type": "earring",
+    "price": 800,
+    "image": "products/diamond/earrings/de2.jpg"
+},
+{
+    "id": 24,
+    "name": "Brilliant Diamond Necklace",
+    "category": "diamond",
+    "type": "necklace",
+    "price": 875,
+    "image": "products/diamond/necklaces/dn2.jpg"
+},
+{
+    "id": 38,
+    "name": "Flower Diamond Necklace",
+    "category": "diamond",
+    "type": "necklace",
+    "price": 875,
+    "image": "products/diamond/necklaces/dn3.jpg"
+},
+{
+    "id": 39,
+    "name": "Pretty Diamond Necklace",
+    "category": "diamond",
+    "type": "necklace",
+    "price": 875,
+    "image": "products/diamond/necklaces/dn4.jpg"
+},
+{
+    "id": 40,
+    "name": "Exquisite Diamond Necklace",
+    "category": "diamond",
+    "type": "earring",
+    "price": 800,
+    "image": "products/diamond/earrings/de3.jpg"
+},
+{
+    "id": 41,
+    "name": "Luxury Diamond Bracelet",
+    "category": "diamond",
+    "type": "bracelet",
+    "price": 980,
+    "image": "products/diamond/bracelets/db3.jpg"
+},
+{
+    "id": 42,
+    "name": "Surreal Diamond Ring",
+    "category": "diamond",
+    "type": "ring",
+    "price": 920,
+    "image": "products/diamond/rings/dr3.jpg"
+}
+]

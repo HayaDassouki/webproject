@@ -32,9 +32,31 @@
                 <img id="carticon" src="images/cart.png" alt="">
             </div>
         </div>
+        <div id="cover">
+            <div id="covertxt">
+                <h1>Discover the Art of Jewelry,<br> Designed Just for You</h1>  
+                <p>Browse Exquisite Designs Now!</p>    
+            </div>
+        </div>
     </header>
     <main>
-
+        <section class="filters">
+            <div class="filtercat">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="gold">Gold</button>
+                <button class="filter-btn" data-category="silver">Silver</button>
+                <button class="filter-btn" data-category="diamond">Diamond</button>
+            </div>
+            <div class="filtertype">
+                <button class="filter-btn" data-type="all">All</button>
+                <button class="filter-btn" data-type="necklace">Necklaces</button>
+                <button class="filter-btn" data-type="bracelet">Bracelets</button>
+                <button class="filter-btn" data-type="ring">Rings</button>
+                <button class="filter-btn" data-type="earring">Earrings</button>
+            </div>
+        </section>
+        <div class="products-container" id="products-container">
+        </div>
     </main>
     <footer>
         <div class="foot">
@@ -88,6 +110,8 @@
             <p>&copy; 2024 Velora. All rights reserved.</p>
         </div>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
