@@ -1,7 +1,7 @@
 header {
     text-align: center;
 }
-.nav-container {
+.nav-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,7 +15,10 @@ header {
 #logo img{
     width: 100px;
 }
-nav ul {
+.head {
+    color: white;
+}
+nav ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -103,6 +106,9 @@ nav ul li a:hover::after{
     }
     .nav-container nav ul li a {
         transition: color 0.3s ease;
+    }
+    .head{
+        color: black;
     }
 }
 
