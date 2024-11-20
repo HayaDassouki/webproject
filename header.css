@@ -106,9 +106,9 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 .backbtn{display: none;}
-
 .scrolled{
     background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
     nav ul li a{
         color: black;
     }
