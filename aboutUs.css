@@ -22,6 +22,9 @@
     background-color: #fff;
     display: flex;
   }
+  .browse{
+    padding-top: 65px;
+  }
   
   .about-section .container {
     max-width: 800px;
@@ -30,13 +33,15 @@
     display: flex;
     flex-direction: column;
   }
+  .All{
+    background-image:url(all.jpg);
+  }
   .Abo{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 150px;
-    background-color: rgb(10, 45, 10);
+    gap: 350px;
   }
   .Abo p{
     width: 250px;
@@ -50,14 +55,19 @@
     font-size: 1rem;
     line-height: 1.6;
   }
-  .about-section img{
-    width: 150px;
-    height: 150px;
-  }
  
+  .about-section .im1{
+    z-index: 2;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  .about-section  .im2{
+    z-index: 1;
+    height: 150px;
+    margin-top: 120px;
+ }
   .story .container {
     padding: 2rem;
-    background-color: #e9ecef;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +78,16 @@
     margin: 0 auto;
     text-align: center;
   }
-  
+  button{
+    background-color: rgb(4, 31, 4);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 130px;
+  }
+button:hover{
+  background-color: rgb(86, 51, 9);
+}
   .story h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -82,7 +101,6 @@
   }
   
   .team-member {
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
@@ -96,7 +114,7 @@
     border-radius: 50%;
     margin-bottom: 1rem;
   }
-  
+
   .team-member h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
