@@ -96,6 +96,17 @@ nav ul li a:hover::after{
     width: 20px;
     height: 20px;
 }
+.material-symbols-outlined{
+    color: var(--emerald-color);
+    font-size: 40px;
+    position: fixed;
+    bottom: 240px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.backbtn{display: none;}
+
 .scrolled{
     background-color: white;
     nav ul li a{
@@ -111,4 +122,8 @@ nav ul li a:hover::after{
         color: black;
     }
 }
+.scrolledd{
+        display: block;
+}
+
 

@@ -132,7 +132,6 @@ button:hover {
     justify-content: center;
     text-wrap: nowrap;
 }
-
 @media screen and (max-width: 800px)
 {   
     #sec1{

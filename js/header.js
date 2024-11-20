@@ -14,3 +14,11 @@ window.addEventListener('scroll', () => {
         navbar2.classList.remove('scrolled')
     }
 })
+const back = document.querySelector('.backbtn')
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+        back.classList.add('scrolledd')
+    } else {
+        back.classList.remove('scrolledd')
+    }
+})
