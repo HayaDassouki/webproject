@@ -53,9 +53,6 @@ footer {
     align-items: center;
     gap: 3px;
 }
-#phone img, #email img, #location img{
-    width: 18px;
-}
 .apps{
     display: flex;
     align-items: center;
