@@ -34,7 +34,11 @@
     flex-direction: column;
   }
   .All{
-    background-image:url(all.jpg);
+    background-image:url(images/lux.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position-x:center;
+    background-position-y: center;
   }
   .Abo{
     display: flex;
@@ -79,7 +83,7 @@
     text-align: center;
   }
   button{
-    background-color: rgb(4, 31, 4);
+    background-color: rgb(74, 8, 8);
     color: white;
     font-size: 18px;
     border-radius: 10px;
@@ -121,6 +125,19 @@ button:hover{
   }
   
   .team-member p {
-    color: #777;
+    color: #bcbcbc;
+    font-size: 19px;
   }
-  
+  @media screen and (max-width: 800px)
+  {   
+      .All{
+      flex-direction: column; 
+      align-items: center;
+      gap: 47px;
+      }
+      .story{
+        flex-direction: column; 
+        align-items: center;
+        gap: 77px;
+        }
+    }
