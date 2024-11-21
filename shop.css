@@ -46,6 +46,29 @@ main{
     font-style: italic;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.searching{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 7px;
+    margin: 10px;
+}
+#search{
+    width: 400px;
+    height: 40px;
+    margin-top: 8px;
+    border-color: var(--gold-color);
+    border-style: double;
+    border-radius: 20px;
+    padding: 15px;
+}
+.searching span{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+}
 .filters {
     display: flex;
     flex-direction: column;
@@ -54,7 +77,6 @@ main{
     gap: 20px;
     padding: 10px;
     background-color: white;
-    margin-top: 10px;
 }
 .filtercat, .filtertype {
     display: flex;
