@@ -34,7 +34,7 @@
     flex-direction: column;
   }
   .All{
-    background-image:url(images/lux.jpg);
+    background-image:url(images/aboutimg/lux.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position-x:center;
