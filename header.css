@@ -18,11 +18,12 @@ header {
 .head {
     color: white;
 }
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
+    gap: 12px;
     justify-content: space-between;
-    padding: 0;
+    padding: 10px;
 }
 nav ul li {
     margin: 0 15px;
@@ -31,29 +32,32 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    display: inline-block;
-    font-family:Arial, Helvetica, sans-serif
 }
-nav ul li a::after{
-    content: '' ;
-    height: 3px; 
-    width: 0%; 
+nav ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0%;
     background: white;
     position: absolute;
     left: 0;
     bottom: -5px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
-.hamburger{
-    display:none;
+.hamburger {
+    display: none; 
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    left: 20px;
+    z-index: 5;
+    top: 20px;
 }
 .hamburger span{
     background-color: black;
@@ -61,20 +65,51 @@ nav ul li a:hover::after{
     height: 5px;
     border-radius: 50px;
 }
-.hamburger:hover{
-    span{background-color: white;}
-}
-@media screen and (max-width: 667px)
-{
-    .nav-container nav,.nav-container h3{
-        display:none;
+@media screen and (max-width: 667px) {
+    #logo {
+        display: none;
+    }
+    .nav-container nav{
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--emerald-color);
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 4;
+        padding: 10px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hamburger{
+        display: flex; 
+        cursor: pointer;
+    }
+    .hamburger span{
+        background-color: white;
+    }
+    .nav-container nav.show{
+        display: flex;
     }
     #logo{
         display: none;
     }
-    .hamburger{
+    #icons{
+        position: absolute;
+        right: 20px;
+        top: 10px;
         display: flex;
+        gap: 15px;
+        z-index: 5;
     }
+}
+nav.show{
+    display: flex; 
 }
 #icons {
     display: flex;
@@ -83,6 +118,7 @@ nav ul li a:hover::after{
     align-items: center;
     gap: 15px; 
     padding:20px;
+    z-index: 5;
 }
 #icons img {
     width: 20px;
