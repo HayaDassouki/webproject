@@ -7,138 +7,138 @@
   --emerald-color: rgb(30, 51, 30);
   --gold-color: rgb(182, 182, 40);
 }
-  .over1{
-    z-index: 1;
-    width: 200px;
-    height: 200px;
-  }
-  .over2{
-    z-index: 2;
-    width: 200px;
-    height: 200px;
-  }
-  .about-section {
-    padding: 2rem;
-    background-color: #fff;
-    display: flex;
-  }
-  .browse{
-    padding-top: 65px;
-  }
-  
-  .about-section .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .All{
-    background-image:url(images/aa.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position-x:center;
-    background-position-y: center;
-  }
-  .Abo{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 350px;
-    margin-top: 60px;
-  }
-  .Abo p{
-    width: 250px;
-  }
-  .about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
- 
-  .about-section .im1{
-    z-index: 2;
-    height: 200px;
-    margin-bottom: 30px;
-  }
-  .about-section  .im2{
-    z-index: 1;
-    height: 150px;
-    margin-top: 120px;
- }
-  .story .container {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .story .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  button{
-    background-color: rgb(74, 8, 8);
-    color: white;
-    font-size: 18px;
-    border-radius: 10px;
-    width: 130px;
-  }
-button:hover{
-  background-color: rgb(86, 51, 9);
+.over1{
+  z-index: 1;
+  width: 200px;
+  height: 200px;
 }
-  .story h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .team {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .team-member {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .team-member img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
+.over2{
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+}
+.about-section {
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
+}
+.browse{
+  padding-top: 65px;
+}
 
-  .team-member h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .team-member p {
-    color: #bcbcbc;
-    font-size: 19px;
-  }
-  @media screen and (max-width: 800px)
-  {   
-      .All{
+.about-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.All{
+  background-image:url(images/aa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position-x:center;
+  background-position-y: center;
+}
+.Abo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 350px;
+  margin-top: 60px;
+}
+.Abo p{
+  width: 250px;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-section .im1{
+  z-index: 2;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.about-section  .im2{
+  z-index: 1;
+  height: 150px;
+  margin-top: 120px;
+}
+.story .container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+button{
+  background-color: rgb(74, 8, 8);
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 130px;
+}
+button:hover{
+background-color: rgb(86, 51, 9);
+}
+.story h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.team-member {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #bcbcbc;
+  font-size: 19px;
+}
+@media screen and (max-width: 800px)
+{   
+    .All{
+    flex-direction: column; 
+    align-items: center;
+    gap: 47px;
+    }
+    .story{
       flex-direction: column; 
       align-items: center;
-      gap: 47px;
+      gap: 77px;
       }
-      .story{
-        flex-direction: column; 
-        align-items: center;
-        gap: 77px;
-        }
-    }
+  }
