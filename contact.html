@@ -51,7 +51,7 @@
                     <form action="#" method="post">
                         <div id="form">
                             <input type="text" id="name" name="name"  placeholder="Your Name" required>
-                            <input type="text" id="num" name="num" placeholder="Your Number" required>
+                            <input type="text" id="num" name="num" placeholder="Your Number">
                         </div>
                         <input type="email" id="email" name="email" placeholder="Your Email Address" required>
                         <textarea id="message" name="message" rows="5" placeholder="Leave a Message" required></textarea>
@@ -61,6 +61,12 @@
                 <div id="formimg"></div>
             </div>
         </section>
+        <div id="messageModal" class="modal">
+            <div class="modal-content"> Thank you for your feedback!
+                <span id="closeModal" class="closebtn">&times;</span>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
         <section class="sec2">
             <div class="cont1">
                     <a href="">
@@ -155,6 +161,7 @@
         </div>
     </footer>
 <script src="js/header.js"></script>
+<script src="js/cnt.js"></script>
 
 </body>
 
