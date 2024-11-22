@@ -35,3 +35,24 @@ prevBtn.addEventListener('click', () => {
 showSection(currentSection);
 updateButtons();
 
+let modal = document.getElementById("loginModal");
+
+let addButtons = document.querySelectorAll(".add-btn");
+
+let closeButton = document.getElementsByClassName("close")[0];
+
+addButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        modal.style.display = "flex";
+    });
+});
+
+closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
