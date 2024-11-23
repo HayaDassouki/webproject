@@ -160,6 +160,9 @@ nav.show{
     nav ul li a::after{
         background-color: black;
     }
+    .hamburger span{
+        background-color: black;
+    }
 }
 .scrolledd{
         display: block;
