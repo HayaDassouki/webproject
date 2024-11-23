@@ -13,10 +13,10 @@ $(document).ready(function() {
           $('#products-container').html('<p>No products</p>')
         } else {
           filteredProducts.forEach(product => {
-            const productCard= 
+            let productCard= 
             `<div class="product-card">
                 <div class="card-img-container">
-                  <img src="${product.image}" alt="${product.name}">
+                  <img src="${product.image}">
                   <h3>${product.name}</h3>
                 </div>
                 <div class="card-overlay">
@@ -31,15 +31,15 @@ $(document).ready(function() {
       }
       displayProducts(products)
       $('.filtercat .filter-btn').on('click', function() {
-        const selectedCategory = $(this).data('category')
-        const selectedType = $('.filtertype .filter-btn.selected').data('type') || 'all'
+        let selectedCategory = $(this).data('category')
+        let selectedType = $('.filtertype .filter-btn.selected').data('type') || 'all'
         $('.filtercat .filter-btn').removeClass('selected')
         $(this).addClass('selected')
         filterProducts(selectedCategory, selectedType)
       })
       $('.filtertype .filter-btn').on('click', function() {
-        const selectedType = $(this).data('type')
-        const selectedCategory = $('.filtercat .filter-btn.selected').data('category') || 'all'
+        let selectedType = $(this).data('type')
+        let selectedCategory = $('.filtercat .filter-btn.selected').data('category') || 'all'
         $('.filtertype .filter-btn').removeClass('selected')
         $(this).addClass('selected')
         filterProducts(selectedCategory, selectedType)
@@ -136,22 +136,22 @@ $(document).ready(function(){
       }
   }
   $('#search').on('input', function(){
-      const query = $(this).val().toLowerCase()
-      const filteredProducts = products.filter(product => 
+      let query = $(this).val().toLowerCase()
+      let filteredProducts = products.filter(product => 
           product.name.toLowerCase().includes(query)
       )
       displayProducts(filteredProducts)
   })
   $('.filtercat .filter-btn').on('click', function(){
-      const selectedCategory = $(this).data('category')
-      const selectedType = $('.filtertype .filter-btn.selected').data('type') || 'all'
+      let selectedCategory = $(this).data('category')
+      let selectedType = $('.filtertype .filter-btn.selected').data('type') || 'all'
       $('.filtercat .filter-btn').removeClass('selected')
       $(this).addClass('selected')
       filterProducts(selectedCategory, selectedType)
   })
   $('.filtertype .filter-btn').on('click', function(){
-      const selectedType = $(this).data('type')
-      const selectedCategory = $('.filtercat .filter-btn.selected').data('category') || 'all'
+      let selectedType = $(this).data('type')
+      let selectedCategory = $('.filtercat .filter-btn.selected').data('category') || 'all'
       $('.filtertype .filter-btn').removeClass('selected')
       $(this).addClass('selected')
       filterProducts(selectedCategory, selectedType)
