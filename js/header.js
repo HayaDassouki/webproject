@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
 })
 let back = document.querySelector('.backbtn')
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 600) {
+    if (window.scrollY > 700) {
         back.classList.add('scrolledd')
     } else {
         back.classList.remove('scrolledd')

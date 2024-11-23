@@ -141,7 +141,6 @@ nav.show{
     padding: 5px;
     cursor: pointer;
 }
-.backbtn{display: none;}
 .scrolled{
     background-color: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.212);
@@ -164,6 +163,7 @@ nav.show{
         background-color: black;
     }
 }
+.backbtn{display: none;}
 .scrolledd{
         display: block;
 }
