@@ -91,6 +91,8 @@ main{
     cursor: pointer;
     padding: 10px 20px;
     transition: all 0.3s ease;
+    position: relative;
+
 }
 .filters::after{
     content: '' ;
@@ -103,6 +105,19 @@ main{
 }
 .filter-btn:hover {
     color: var(--gold-color);
+}
+.filter-btn::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: var(--gold-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.filter-btn:hover::after {
+    width: 100%
 }
 .products-container{
     display: flex;
@@ -186,6 +201,18 @@ main{
 }
 .card-overlay button:hover {
     background-color: #207733;
+}
+@media screen and (max-width: 700px){
+    .filtertype{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    .filtercat{
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
   
