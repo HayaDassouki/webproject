@@ -65,7 +65,7 @@ nav ul li a:hover::after {
     height: 5px;
     border-radius: 50px;
 }
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 750px) {
     #logo {
         display: none;
     }
@@ -151,11 +151,14 @@ nav.show{
     .nav-container {
         transition: background-color 0.3s ease;
     }
-    .nav-container nav ul li a {
+    .nav-container nav ul li a{
         transition: color 0.3s ease;
     }
     .head{
         color: black;
+    }
+    nav ul li a::after{
+        background-color: black;
     }
 }
 .scrolledd{
