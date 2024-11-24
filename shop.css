@@ -230,12 +230,22 @@ main{
 #cart{
     background-color: var(--emerald-color);
     color: white;
-    padding: 20px;
+    padding: 100px;
     border-radius: 8px;
     border: 2px solid rgba(0, 0, 0, 0.63);
-    width: 500px; 
+    min-width: 500px; 
+    max-height: 600px;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+}
+#yourItems{
+    color: white;
 }
 .closeCart {
     color: white;
@@ -251,5 +261,80 @@ main{
     text-decoration: none;
     cursor: pointer;
 }
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.cart-item img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.cart-item h4{
+    font-size: 16px;
+    color: black;
+    padding: 3px;
+}
+.cart-item p{
+    font-size: 16px;
+    color: #666;
+    margin: 5px;
+}
+#cart-container {
+    padding: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+.quantity-control{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.quantity-control button{
+    background-color: whitesmoke;
+    border: 1px solid var(--gold-color);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.quantity-control .quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.quantity-control button:hover {
+    background-color: #ddd;
+}
+.remove-item {
+    background-color: rgb(71, 128, 71); 
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+
+.remove-item:hover {
+    background-color: var(--emerald-color);
+}
+
 
 
