@@ -150,6 +150,7 @@ main {
     background-position-y: top;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .dis{
@@ -163,7 +164,7 @@ main {
 }
 .dis h2{
     margin-left: 100px;
-
+    
 }
 .discount p{
     font-size: 30px;
@@ -173,12 +174,18 @@ main {
 .discount h2{
     margin-left: 100px;
 }
+.big h2{
+    font-size: 50px;
+}
+
 .discount button{
-    background-color: brown;
+    background-color: var(--emerald-color);
     color: white;
     font-size: 17px;
-    margin-top: 380px;
+    margin-top: 180px;
     margin-left: 250px;
+    width: 100px;
+    height: 40px;
 }
 .big{
     width: 600px;
@@ -188,7 +195,6 @@ main {
     background-position-y: top;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 10px;
     margin-bottom: 10px;
     box-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
 }
@@ -210,7 +216,7 @@ main {
     margin-top: 20px;
 }
 
-button {
+.add-btn {
     background-color: rgb(8, 46, 8);
     color: white;
     border: none;
@@ -221,7 +227,10 @@ button {
     border-radius: 5px;
 }
 
- .Test button:hover {
+ #prevBtn:hover {
+    background-color: green;
+}
+#nextBtn:hover {
     background-color: green;
 }
 .tes{
@@ -231,16 +240,14 @@ button {
 }
 .box{
     max-width: 300px;
-    border: 2px dashed black;
+    background-color: var(--emerald-color);
+    color: var(--emerald-color);
 }
 .Test h2{
     display: flex;
     justify-content: center;
 }
-.box:hover{
-   transform: scale(1.05, 1.05);
-   font-size: 17px;
-}
+
 .modal {
     display: none; 
     position: fixed; 
@@ -291,7 +298,7 @@ input[type="text"], input[type="password"] {
     flex-direction: column;
     align-items: center;
 }
-.modal button {
+#log{
     padding: 10px;
     width: 100%;
     margin-top: 10px;
@@ -302,6 +309,6 @@ input[type="text"], input[type="password"] {
     cursor: pointer;
 }
 
-button:hover {
+#log:hover {
     background-color: green;
 }
