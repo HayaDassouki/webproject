@@ -57,6 +57,9 @@ window.addEventListener("click", function (event) {
     }
 });
 $(document).ready(function () {
+    $("#backbtn").click(function(){
+        window.location.href="index.html"
+    })
     $('#cart-container').hide()
 
     let products = []
@@ -136,7 +139,7 @@ $(document).ready(function () {
                                 <button class="increase-qty" data-id="${product.id}">+</button>
                             </div>
                             <p class="price">$${(product.price * product.quantity)}</p>
-                            <button class="remove-item" data-id="${product.id}"><span class="material-symbols-outlined">delete </span></button>
+                            <button class="remove-item" data-id="${product.id}"><i class="fas fa-trash"></i></button>
               </div>
             `)
           })

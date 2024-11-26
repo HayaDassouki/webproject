@@ -58,7 +58,9 @@
 main {
     padding: 20px;
 }
-
+.pdts h2{ 
+    text-align: center;
+}
 .discount button:hover{
     background-color: rgb(108, 71, 26);
 }
