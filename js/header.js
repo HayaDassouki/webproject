@@ -29,11 +29,15 @@
 
 
 $(document).ready(function(){
-// nav bar background on scroll
 $(function () {
   $(document).scroll(function () {
-      $nav = $(".nav-container");
-      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
-});
+      $nav = $(".nav-container")
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height())
+    })
+})
+let navigation=document.getElementById('navbar')
+document.getElementById('hamburger').addEventListener('click',()=>{
+    navigation.classList.toggle('show')    
+})
+
 })

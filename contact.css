@@ -5,7 +5,7 @@
 }
 :root {
     --emerald-color: rgb(30, 51, 30);
-    --gold-color: rgba(182, 182, 54, 0.918);
+    --gold-color: rgb(226, 199, 46);
 }
 #cover{
     background-color: var(--emerald-color);
@@ -57,7 +57,7 @@ h1{
     gap: 10px;
     margin-bottom: 20px;
 }
-input, textarea, button{
+input, textarea, #subbtn{
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
@@ -67,7 +67,7 @@ input, textarea, button{
 #form input{
     flex: 1; 
 }
-button{
+#subbtn{
     background-color: var(--emerald-color);
     color: white;
     cursor: pointer;
@@ -76,7 +76,7 @@ button{
     transition: background-color 0.3s ease;
     box-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
 }
-button:hover {
+#subbtn:hover {
     background-color: rgb(54, 88, 54);
 }
 #formimg {

@@ -1,3 +1,7 @@
+:root {
+    --emerald-color: rgb(30, 51, 30);
+    --gold-color: rgb(226, 199, 46);
+}
 header {
     text-align: center;
 }
@@ -5,29 +9,33 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 7px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
-#logo img{
-    width: 100px;
-}
-.head {
-    color: white;
+#logo{
+    width: 120px;
+    height: 50px;
+    background-image: url(images/Logo.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 12px;
     justify-content: space-between;
-    padding: 10px;
 }
 nav ul li {
     margin: 0 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 nav ul li a {
     color: white;
@@ -48,6 +56,24 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+#icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; 
+    padding: 5px;
+    z-index: 5;
+}
+.headericons{
+    background-color: transparent;
+    border: none;
+    width: 30px;
+}
+.head{color: white;}
+.head:hover{
+    transform: translateY(-2px);
+}
 .hamburger {
     display: none; 
     justify-content: center;
@@ -57,23 +83,19 @@ nav ul li a:hover::after {
     position: absolute;
     left: 20px;
     z-index: 5;
-    top: 20px;
+    top: 15px;
 }
 .hamburger span{
-    background-color: black;
     width: 40px;
-    height: 5px;
+    height: 3px;
     border-radius: 50px;
 }
 @media screen and (max-width: 750px) {
-    #logo {
-        display: none;
-    }
     .nav-container nav{
         display: none; 
         flex-direction: column;
         align-items: center;
-        background-color: var(--emerald-color);
+        background-color: rgba(30, 51, 30, 0.877);
         position: absolute;
         right: 0;
         left: 0;
@@ -111,44 +133,13 @@ nav ul li a:hover::after {
 nav.show{
     display: flex; 
 }
-#icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px; 
-    padding:20px;
-    z-index: 5;
-}
-#icons img {
-    width: 20px;
-    height: 20px; 
-}
-#icons #carticon{
-    width: 30px;
-    height: 30px;
-}
-#icons #usericon{
-    width: 20px;
-    height: 20px;
-}
-.material-symbols-outlined{
-    color: var(--emerald-color);
-    font-size: 40px;
-    position: fixed;
-    bottom: 240px;
-    right: 10px;
-    padding: 5px;
-    cursor: pointer;
+.nav-container.scrolled {
+    transition: background-color 0.3s ease;
+    background-color: white;
 }
 .scrolled{
-    background-color: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
     nav ul li a{
-        color: black;
-    }
-    .nav-container {
-        transition: background-color 0.3s ease;
+        color:black;
     }
     .nav-container nav ul li a{
         transition: color 0.3s ease;
@@ -164,6 +155,4 @@ nav.show{
     }
 }
 .backbtn{display: none;}
-.scrolledd{
-        display: block;
-}
+
