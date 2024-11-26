@@ -92,12 +92,16 @@ $(document).ready(function(){
     $('#cart-container').empty()
     if (cart.length === 0) {
       $('#yourItems').html('<h3>Your cart is empty!</h3>')
+      $('#yourItems').css({'color':'white', 'align-items': 'center'})
       $('#cart-container').hide()
-    } else {
+    }
+     else {
       $('#yourItems').html('<h3>Your Items</h3>')
+      $('#yourItems').css({'color': 'black','position': 'absolute', 'top': '10px'})
       $('#cart-container').show()
       cart.forEach(product => {
         $('#cart-container').append(`
+          <div>
           <div class="cart-item">
             <img src="${product.image}" alt="${product.name}">
             <h4>${product.name}</h4>
