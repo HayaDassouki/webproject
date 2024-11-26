@@ -47,26 +47,10 @@
         </div>
     </header>
     <main>
-        <section class="sec1">
-            <h2>New Release</h2>
-            <div class="image-gallery">
-                <div class="image-item" id="new1">
-                    <div class="price">$130</div>
-                    <button id="addButton" class="add-btn">Add to cart</button>
-                </div>
-                <div class="image-item" id="new2">
-                    <div class="price">$170</div>
-                    <button id="addButton" class="add-btn">Add to cart</button>
-                </div>
-                <div class="image-item" id="new3">
-                    <div class="price">$230</div>
-                    <button id="addButton" class="add-btn">Add to cart</button>
-                </div>
-                <div class="image-item" id="new4">
-                    <div class="price">$190</div>
-                    <button id="addButton" class="add-btn">Add to cart</button>
-                </div>
+        <section class="pdts">
+            <div class="products-container" id="products-container">
             </div>
+        </section>
             <div id="loginModal" class="modal">
                 <div class="modal-content">
                     <h2>Login or Sign In</h2>
@@ -77,13 +61,12 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required><br><br>
                         <div id="btns">
-                            <button type="submit" id="log">Login</button>
-                            <button type="button" id="log">Sign Up</button>
+                            <button type="submit" class="login">Login</button>
+                            <button type="button" class="login">Sign Up</button>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>
         <section class="discount">
             <div class="big">
                 <p>Gold Ring Jewerly</p>
@@ -198,6 +181,5 @@
     </footer>
     <script src="js/home.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/shop.js"></script>
 </body>
 </html>

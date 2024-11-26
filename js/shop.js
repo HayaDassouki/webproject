@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#backbtn").click(function(){
         window.location.href="Shop.html"
     })
-  $('#cart-container').hide();
+  $('#cart-container').hide()
   let products = []
   fetch('products.json')
       .then(response => {
@@ -17,7 +17,7 @@ $(document).ready(function(){
       })
       .catch(error => {
           console.error('Error:', error)
-      });
+      })
   function displayProducts(filteredProducts){
       $('#products-container').empty()
       if (filteredProducts.length === 0) {
