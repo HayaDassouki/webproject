@@ -35,5 +35,9 @@ $(document).ready(function () {
       $("#name").on("input", function () {
       this.value = this.value.replace(/[^a-zA-Z\s]/g, "")
     })
+
+    $("#backbtn").click(function(){
+      window.location.href="contact.html"
+    })
 })
   

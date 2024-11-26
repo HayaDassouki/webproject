@@ -167,3 +167,16 @@ nav.show{
     transform: rotate(-45deg);
     transform-origin: 5% 50%;
 }
+#backbtndiv{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+#backbtn{
+    background-color: transparent;
+    border: none;
+    color: var(--emerald-color)
+}
+#backbtn:hover{
+    cursor: pointer;
+}

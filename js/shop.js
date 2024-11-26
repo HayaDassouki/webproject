@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $("#backbtn").click(function(){
+        window.location.href="Shop.html"
+    })
   $('#cart-container').hide();
   let products = []
   fetch('products.json')
@@ -111,7 +114,7 @@ $(document).ready(function(){
                             <button class="increase-qty" data-id="${product.id}">+</button>
                         </div>
                         <p class="price">$${(product.price * product.quantity)}</p>
-                        <button class="remove-item" data-id="${product.id}">Remove</button>
+                        <button class="remove-item" data-id="${product.id}"><span class="material-symbols-outlined">delete </span></button>
           </div>
         `)
       })
@@ -165,8 +168,4 @@ $(document).on('click', '.remove-item', function () {
 .catch(error => {
   console.error('Error fetching products:', error)
 })
-
-
-
-
 

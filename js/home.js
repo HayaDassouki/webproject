@@ -56,3 +56,8 @@ window.addEventListener("click", function (event) {
         modal.style.display = "none";
     }
 });
+$(document).ready(function(){
+    $("#backbtn").click(function(){
+        window.location.href="index.html"
+      })
+})
