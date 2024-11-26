@@ -55,7 +55,6 @@ h1{
 #form{
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
 }
 input, textarea, #subbtn{
     width: 100%;
@@ -88,42 +87,51 @@ input, textarea, #subbtn{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     box-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 .modal{
-    display: none; 
     position: fixed; 
     z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    display: none;
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
 }
 .modal-content{
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: left;
-    position: relative;
-}
-.closebtn{
-    color: #a21919;
-    font-size: 28px;
-    font-weight: bold;
     position: absolute;
-    right: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--emerald-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+  
+.modal-content p{
+    margin: 10px 0;
+    color: white;
+    font-size: 20px;
+} 
+.closebtn{
+    position: absolute;
     top: 10px;
+    right: 15px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
 }
 .closebtn:hover{
-    color: var(--emerald-color);
-    text-decoration: none;
-    cursor: pointer;
+    color: #999;
 }
 .sec2{
     display: flex;
@@ -169,23 +177,30 @@ input, textarea, #subbtn{
 @media screen and (max-width: 800px)
 {   
     #sec1{
-    flex-direction: column; 
-    align-items: center;
-    gap: 77px;
+        flex-direction: column; 
+        align-items: center;
+        gap: 77px;
+    }
+    .sec1{
+        text-align: center;
     }
 }
 @media screen and (max-width: 614px)
 {   
     #sec1{
-    flex-direction: column; 
-    justify-content: center;
+        flex-direction: column; 
+        justify-content: center;
     }
     .form{
         max-width: 600px; 
-    }
+    }  
+}
+@media screen and (max-width: 900px){
     .sec2{
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
 }
+
+

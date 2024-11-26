@@ -1,46 +1,39 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let form = document.querySelector('form')
-    let messageModal = document.getElementById('messageModal')
-    let modalMessage = document.getElementById('modalMessage')
-    let closeModal = document.getElementById('closeModal')
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); 
-        let name = document.getElementById('name').value.trim()
-        let number = document.getElementById('num').value.trim()
-        let email = document.getElementById('email').value.trim()
-        let message = document.getElementById('message').value.trim()
-        let noerror = true
-        let error = []
-        if(!name){
-          noerror = false
-          error.push("Please include your name")
-        }
-        if(!email || !/\S+@\S+\.\S+/.test(email)){
-            noerror = false;
-            error.push("Please enter a valid email address!")
-        }
-        if(!message){
-            noerror = false;
-            error.push("Please leave a message!")
-        }
-        if(noerror){
-            modalMessage.textContent = "Yout message was sent successfully!"
-            messageModal.style.backgroundColor = 'transparent'
-            modalMessage.style.color = 'white'
-            showModal()
-            form.reset()
-        }else{
-            modalMessage.innerHTML = "Please include all requirements"
-            messageModal.style.backgroundColor = 'transparent'
-            modalMessage.style.color = 'white'
-            showModal()
-        }
+$(document).ready(function () {
+    $("#subbtn").click(function (e) {
+      e.preventDefault()
+        let name = $("#name").val().trim()
+        let num = $("#num").val().trim()
+        let email = $("#email").val().trim()
+        let message = $("#message").val().trim()
+        if (!name || !/^[a-zA-Z\s]+$/.test(name)) {
+        alert("Please enter your name.")
+        return
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.")
+        return
+      }
+      if (!message) {
+        alert("Please enter a message.")
+        return
+      }
+        $("#messageModal").fadeIn()
+        $("#modalMessage").text("Thank You for Your Feedback!")
+        $("form")[0].reset()
     })
-    function showModal(){
-        messageModal.style.display ='flex'
-    }
-      closeModal.addEventListener('click', function () {
-        messageModal.style.display = 'none'
+      $("#closeModal").click(function () {
+      $("#messageModal").fadeOut()
     })
-})  
+      $(window).click(function (e) {
+      if ($(e.target).is("#messageModal")) {
+        $("#messageModal").fadeOut()
+      }
+    })
+      $("#num").on("input", function () {
+      this.value = this.value.replace(/[^\d]/g, "")
+    })
+      $("#name").on("input", function () {
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, "")
+    })
+})
+  
