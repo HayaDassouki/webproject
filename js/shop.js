@@ -152,6 +152,11 @@ $(document).on('click', '.remove-item', function () {
   $('.closeCart').on('click', function() {
     $('.thecart').fadeOut()
   })
+  $(window).click(function (e) {
+    if ($(e.target).is('.thecart')) {
+      $('.thecart').fadeOut()
+    }
+  })
 })
 .catch(error => {
   console.error('Error fetching products:', error)

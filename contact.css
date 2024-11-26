@@ -45,7 +45,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap; 
 }
 .form{
@@ -62,9 +62,6 @@ input, textarea, #subbtn{
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 5px;
-}
-#form input{
-    flex: 1; 
 }
 #subbtn{
     background-color: var(--emerald-color);
