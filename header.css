@@ -91,6 +91,20 @@ nav ul li a:hover::after {
     border-radius: 50px;
 }
 @media screen and (max-width: 750px) {
+    .nav-container.scrolled {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 60px;
+    }
     .nav-container nav{
         display: none; 
         flex-direction: column;
@@ -129,7 +143,9 @@ nav ul li a:hover::after {
         gap: 15px;
         z-index: 5;
     }
+
 }
+
 nav.show{
     display: flex; 
 }
