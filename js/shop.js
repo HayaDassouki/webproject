@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    $("#backbtn").click(function(){
-        window.location.href="header"
-    })
   $('#cart-container').hide()
   let products = []
   fetch('products.json')

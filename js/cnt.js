@@ -1,7 +1,4 @@
 $(document).ready(function () {
-  $("#backbtn").click(function(){
-    window.location="#logo"
-  })
     $("#subbtn").click(function (e) {
       e.preventDefault()
         let name = $("#name").val().trim()
