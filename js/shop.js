@@ -74,25 +74,25 @@ $(document)
       displayProducts(filteredProducts);
     }
 
-    // function addItemToStore(id) {
-    //   let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-
-    //   if (!cartItems) {
-    //     cartItems = {
-    //       [id]: 1,
-    //     };
-    //   } else {
-    //     if (id in cartItems) {
-    //       cartItems[id] += 1;
-    //     } else {
-    //       cartItems[id] = 1;
-    //     }
-    //   }
-
-    //   localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-    //   console.log("id", id), console.log("cartItems", cartItems);
-    // }
+    function addItemToStore(id) {
+      let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  
+      if (!cartItems) {
+        cartItems = {
+          [id]: 1,
+        };
+      } else {
+        if (id in cartItems) {
+          cartItems[id] += 1;
+        } else {
+          cartItems[id] = 1;
+        }
+      }
+  
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  
+      console.log("id", id), console.log("cartItems", cartItems);
+    }
 
     $(document).on("click", ".add-to-cart", function () {
       let productId = $(this).data("id");
