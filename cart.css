@@ -128,7 +128,6 @@
 .remove-item:hover {
     background-color: var(--emerald-color);
 }   
-/* Add this at the bottom of your CSS */
 @media (max-width: 768px) {
     #cart{
         min-width: 400px;
@@ -194,3 +193,25 @@
         font-size: 24px;
     }
 }
+@media (max-width: 360px) {
+    #cart {
+        min-width: 180px;
+        max-width: 250px;
+        max-height: 350px;
+        padding: 15px;
+    }
+    .cart-item {
+        font-size: 10px;
+    }
+    .cart-item img {
+        width: 30px;
+        height: 30px;
+    }
+    .remove-item {
+        font-size: 8px;
+    }
+    .closeCart {
+        font-size: 20px;
+    }
+}
+
