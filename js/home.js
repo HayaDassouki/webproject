@@ -57,9 +57,6 @@ $("#loginModal form").submit(function (event) {
   modal.style.display = "none";
   updateCartDisplay();
 });
-$(document).on("click", "#log-icon", function(){
-  modal.style.display ="flex";
-})
 function logout() {
   isLoggedIn = false;
   updateCartDisplay();

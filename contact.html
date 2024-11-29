@@ -37,7 +37,7 @@
                 </ul>
             </nav>
             <div id="icons">
-                <button class="headericons"><i class="material-icons head" style=" font-size:30px;">login</i></button>
+                <button class="headericons" id="log-icon"><i class="material-icons head" style=" font-size:30px;">login</i></button>
                 <button class="headericons" id="cartbtn"><i class="material-icons head cartt"
                         style=" font-size:30px">shopping_cart</i></button>
             </div>
@@ -51,6 +51,22 @@
         </div>
     </header>
     <main>
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <h2>Login or Sign In</h2>
+                <span class="close">&times;</span>
+                <form action="#" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <div id="btns">
+                        <button type="submit" class="login">Login</button>
+                        <button type="button" class="login">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <section class="sec1">
             <h2>We’re always happy to assist!</h2>
             <div id="sec1">
@@ -179,6 +195,8 @@
     <script src="js/header.js"></script>
     <script src="js/cnt.js"></script>
     <script src="js/shop.js"></script>
+    <script src="js/home.js"></script>
+
 
 </body>
 
