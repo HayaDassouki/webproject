@@ -119,6 +119,7 @@ $(document)
     $("#cartisempty").html("<h3>Your cart is empty!</h3>")
     function updateCartDisplay() {
       $("#cart-container").empty()
+      $("#cartisempty").show()
       $("#cartisempty").html("<h3>Your cart is empty!</h3>")
       $("#yourItems").hide()
       if (cart.length === 0) {

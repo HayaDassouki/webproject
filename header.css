@@ -90,7 +90,66 @@ nav ul li a:hover::after {
     height: 3px;
     border-radius: 50px;
 }
+nav.show{
+    transform: translateX(250px); 
+}
+.nav-container.scrolled {
+    transition: background-color 0.3s ease;
+    background-color: white;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.363);
+}
+.scrolled{
+    nav ul li a{
+        color:black;
+    }
+    .nav-container nav ul li a{
+        transition: color 0.3s ease;
+    }
+    .head{
+        color: black;
+    }
+    nav ul li a::after{
+        background-color: black;
+    }
+    .hamburger span{
+        background-color: black;
+    }
+
+}
+.backbtn{display: none;}
+
+.hamburger.hamclicked span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 5% 50%;
+}
+.hamburger.hamclicked span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.hamclicked span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 5% 50%;
+}
+.hamburger.hamclicked span{
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+#backbtndiv{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+#backbtn{
+    background-color: transparent;
+    border: none;
+    color: var(--emerald-color)
+}
+#backbtn:hover{
+    cursor: pointer;
+}
 @media screen and (max-width: 750px) {
+    .nav-container.scrolled {
+        transition: background-color 0.3s ease;
+    }
     .nav-container.scrolled {
         display: flex;
         align-items: center;
@@ -98,7 +157,7 @@ nav ul li a:hover::after {
         padding: 7px;
         position: fixed;
         top: 0;
-        left: 0;
+        left:0;
         width: 100%;
         z-index: 5;
         padding-left: 10px;
@@ -109,18 +168,32 @@ nav ul li a:hover::after {
         display: none; 
         flex-direction: column;
         align-items: center;
-        background-color: rgba(30, 51, 30, 0.877);
+        background-color: var(--emerald-color);
         position: absolute;
-        right: 0;
-        left: 0;
+        left: -250px; 
         top: 0;
         z-index: 4;
         padding: 10px;
+        width: 250px; 
+        height: auto;
+        border-bottom-right-radius: 10px;
+        transition: transform 0.9s ease; 
+
+    }
+    .nav-container nav.show {
+        display: flex;
+        transform: translateX(250px); 
     }
     nav ul{
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 40px;
+    }
+    nav ul li a{
+        font-size: 20px;
     }
     .hamburger{
         display: flex; 
@@ -143,56 +216,19 @@ nav ul li a:hover::after {
         gap: 15px;
         z-index: 5;
     }
-
-}
-
-nav.show{
-    display: flex; 
-}
-.nav-container.scrolled {
-    transition: background-color 0.3s ease;
-    background-color: white;
-}
-.scrolled{
-    nav ul li a{
-        color:black;
+    .scrolled{
+        nav ul li a{
+        color:white;
     }
     .nav-container nav ul li a{
         transition: color 0.3s ease;
     }
-    .head{
-        color: black;
-    }
     nav ul li a::after{
-        background-color: black;
+        background-color: white;
     }
-    .hamburger span{
-        background-color: black;
+    .hamclicked span{
+        background-color: white;
     }
-}
-.backbtn{display: none;}
-
-.hamburger.hamclicked span:nth-child(1) {
-    transform: rotate(45deg);
-    transform-origin: 5% 50%;
-}
-.hamburger.hamclicked span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.hamclicked span:nth-child(3) {
-    transform: rotate(-45deg);
-    transform-origin: 5% 50%;
-}
-#backbtndiv{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-}
-#backbtn{
-    background-color: transparent;
-    border: none;
-    color: var(--emerald-color)
-}
-#backbtn:hover{
-    cursor: pointer;
+    }
+ 
 }
