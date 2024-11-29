@@ -113,24 +113,29 @@ $(document)
     });
     let cart = [];
     function addToCart(product) {
-      cart.push(product);
-      updateCartDisplay();
+      cart.push(product)
+      updateCartDisplay()
     }
-    $("#yourItems").html("<h3>Your cart is empty!</h3>");
+    $("#cartisempty").html("<h3>Your cart is empty!</h3>")
     function updateCartDisplay() {
-      $("#cart-container").empty();
+      $("#cart-container").empty()
+      $("#cartisempty").html("<h3>Your cart is empty!</h3>")
+      $("#yourItems").hide()
       if (cart.length === 0) {
-        $("#yourItems").html("<h3>Your cart is empty!</h3>");
-        $("#yourItems").css({ color: "white", "align-items": "center" });
-        $("#cart-container").hide();
+        $("#cartisempty").css({ 
+          color: "white", 
+          "align-items" : "center"
+           })
+        $("#cart-container").hide()
+
       } else {
-        $("#yourItems").html("<h3>Your Items</h3>");
+        $("#yourItems").show()
+        $("#cartisempty").hide()
+        $("#yourItems").html("<h3>Your Items</h3>")
         $("#yourItems").css({
-          color: "black",
-          position: "absolute",
-          top: "10px",
-        });
-        $("#cart-container").show();
+          color: "white",
+        })
+        $("#cart-container").show()
         cart.forEach((product) => {
           $("#cart-container").append(`
           <div>
@@ -153,55 +158,54 @@ $(document)
                           product.id
                         }"><span class="material-icons">delete</span></button>
           </div>
-        `);
-        });
+        `)
+        })
       }
     }
     $(document).on("click", ".increase-qty", function () {
-      let productId = $(this).data("id");
-      let cartItem = cart.find((item) => item.id === productId);
+      let productId = $(this).data("id")
+      let cartItem = cart.find((item) => item.id === productId)
       if (cartItem) {
-        cartItem.quantity += 1;
-        updateCartDisplay();
+        cartItem.quantity += 1
+        updateCartDisplay()
       }
-    });
+    })
     $(document).on("click", ".decrease-qty", function () {
       let productId = $(this).data("id");
       let cartItem = cart.find((item) => item.id === productId);
 
       if (cartItem) {
-        cartItem.quantity -= 1;
+        cartItem.quantity -= 1
         if (cartItem.quantity <= 0) {
-          cart = cart.filter((item) => item.id !== productId);
+          cart = cart.filter((item) => item.id !== productId)
         }
-        updateCartDisplay();
+        updateCartDisplay()
       }
-    });
+    })
     $(document).on("click", ".remove-item", function () {
-      let productId = $(this).data("id");
-      cart = cart.filter((item) => item.id !== productId);
-      updateCartDisplay();
-    });
+      let productId = $(this).data("id")
+      cart = cart.filter((item) => item.id !== productId)
+      updateCartDisplay()
+    })
 
     $("#cartbtn").click(function () {
-      $(".thecart").fadeIn();
+      $(".thecart").fadeIn()
       $(".thecart").css({
         display: "flex",
         "justify-content": "center",
         "align-items": "center",
         "text-align": "center",
-      });
-      console.log("Cart opened");
-    });
+      })
+    })
     $(".closeCart").on("click", function () {
-      $(".thecart").fadeOut();
-    });
+      $(".thecart").fadeOut()
+    })
     $(window).click(function (e) {
       if ($(e.target).is(".thecart")) {
-        $(".thecart").fadeOut();
+        $(".thecart").fadeOut()
       }
-    });
+    })
   })
   .catch((error) => {
-    console.error("Error fetching products:", error);
-  });
+    console.error("Error fetching products:", error)
+  })
