@@ -39,6 +39,18 @@ let isLoggedIn = false;
 let cart = [];
 let products = [];
 
+
+function updateCartDisplay() {
+  if (isLoggedIn == true) {
+    $("#cart-item").show();
+    updateCartItems();
+  } else {
+    $("#cart-item").hide();
+  }
+}
+
+let modal = document.getElementById("loginModal");
+
 $("#loginModal form").submit(function (event) {
   event.preventDefault();
   isLoggedIn = true;
@@ -50,17 +62,6 @@ function logout() {
   isLoggedIn = false;
   updateCartDisplay();
   modal.style.display = "none";
-}
-
-let modal = document.getElementById("loginModal");
-
-function updateCartDisplay() {
-  if (isLoggedIn == true) {
-    $("#cart-item").show();
-    updateCartItems();
-  } else {
-    $("#cart-item").hide();
-  }
 }
 
 function updateCartItems() {
@@ -112,7 +113,7 @@ window.addEventListener("click", function (event) {
 });
 
 function renderCart() {
-  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  let cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
   let cartItemHTML = "";
   Object.keys(cartItems)
@@ -123,7 +124,7 @@ function renderCart() {
     })
     .forEach((key) => {
       console.log("products", products);
-      const product = products?.find((product) => product.id == key);
+      let product = products?.find((product) => product.id == key);
       console.log("product", product);
 
       cartItemHTML += `
