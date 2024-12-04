@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
@@ -32,7 +33,7 @@
                 </ul>
             </nav>
             <div id="icons">
-                <button class="headericons"><i class="material-icons head" style=" font-size:30px;">login</i></button>
+                <button class="headericons" id="log-icon"><i class="material-icons head" style=" font-size:30px;">login</i></button>
                 <button class="headericons" id="cartbtn"><i class="material-icons head cartt"
                         style=" font-size:30px">shopping_cart</i></button>
             </div>
@@ -44,6 +45,22 @@
             </div>
         </div>
     </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login or Sign In</h2>
+            <span class="close">&times;</span>
+            <form action="#" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <div id="btns">
+                    <button type="submit" class="login">Login</button>
+                    <button type="button" class="login">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <main>
         <section class="searching">
             <input type="text" id="search" placeholder="Search for products...">
@@ -136,9 +153,9 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/shop.js"></script>
     <script src="js/header.js"></script>
-
 </body>
 
 </html>
