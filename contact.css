@@ -48,11 +48,11 @@ h1{
     gap: 40px;
     flex-wrap: wrap; 
 }
-.form{
+.sec1 .form{
     flex: 1; 
     min-width: 300px; 
 }
-#form{
+.sec1 #form{
     display: flex;
     gap: 10px;
 }
@@ -62,6 +62,9 @@ input, textarea, #subbtn{
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 5px;
+}
+#email{
+    border: 1px solid rgba(0, 0, 0, 0.315);
 }
 #subbtn{
     background-color: var(--emerald-color);

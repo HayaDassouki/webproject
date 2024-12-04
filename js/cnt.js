@@ -19,7 +19,7 @@ $(document).ready(function () {
       }
         $("#messageModal").fadeIn()
         $("#modalMessage").text("Thank You for Your Feedback!")
-        $("form")[0].reset()
+        $("form")[0].reset();
     })
       $("#closeModal").click(function () {
       $("#messageModal").fadeOut()
