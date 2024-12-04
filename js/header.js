@@ -13,4 +13,7 @@ let x=document.getElementById('hamburger')
 document.getElementById("hamburger").addEventListener("click", function () {
   x.classList.toggle("hamclicked")
 })
+$(document).on("click", "#log-icon", function(){
+  modal.style.display ="flex";
+})
 })

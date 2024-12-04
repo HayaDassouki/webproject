@@ -39,6 +39,32 @@ let cart = [];
 let products = [];
 
 
+<<<<<<< HEAD
+=======
+function updateCartDisplay() {
+  if (isLoggedIn == true) {
+    $("#cart-item").show();
+    updateCartItems();
+  } else {
+    $("#cart-item").hide();
+  }
+}
+
+let modal = document.getElementById("loginModal");
+
+$("#loginModal form").submit(function (event) {
+  event.preventDefault();
+  isLoggedIn = true;
+  modal.style.display = "none";
+  updateCartDisplay();
+});
+function logout() {
+  isLoggedIn = false;
+  updateCartDisplay();
+  modal.style.display = "none";
+}
+
+>>>>>>> 030e13e52191e22fc3227b110cf40d341e6c6e64
 function updateCartItems() {
   $("#cart-items").empty();
   if (cartItems === 0) {

@@ -183,6 +183,7 @@ main {
     display: flex;
     justify-content: center;
 }
+<<<<<<< HEAD
 
 .close {
     color: #a21919;
@@ -212,6 +213,8 @@ input[type="text"], input[type="password"] {
     align-items: center;
 }
 
+=======
+>>>>>>> 030e13e52191e22fc3227b110cf40d341e6c6e64
 .products-container{
     display: flex;
     align-items: center;
@@ -317,3 +320,4 @@ input[type="text"], input[type="password"] {
 .cart-item-quantity .quantity {
     font-size: 16px;
 }
+
