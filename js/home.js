@@ -38,9 +38,6 @@ updateButtons();
 let cart = [];
 let products = [];
 
-
-<<<<<<< HEAD
-=======
 function updateCartDisplay() {
   if (isLoggedIn == true) {
     $("#cart-item").show();
@@ -64,7 +61,6 @@ function logout() {
   modal.style.display = "none";
 }
 
->>>>>>> 030e13e52191e22fc3227b110cf40d341e6c6e64
 function updateCartItems() {
   $("#cart-items").empty();
   if (cartItems === 0) {
@@ -106,8 +102,6 @@ $(document).on("click", ".increase-btn", function () {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
   renderCart();
 });
-
-
 
 function renderCart() {
   let cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -157,7 +151,7 @@ $(document).ready(function () {
     window.location.href = "index.html";
   });
 
-  let cart = [];
+
   fetch("products.json")
     .then((response) => {
       if (!response.ok) {
@@ -169,7 +163,6 @@ $(document).ready(function () {
       let selectedProducts = data.filter((product) =>
         [3, 4, 30].includes(product.id)
       );
-      products = selectedProducts;
       displayProducts(selectedProducts);
     })
     .catch((error) => {
