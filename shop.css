@@ -14,6 +14,7 @@ main{
 #cover{
     background-image: url(images/shopimgs/shopcover.jpg);
     height: 400px;
+     width: 100%;
     background-repeat: no-repeat;
     background-size: cover; 
     background-position-x:center;
@@ -207,12 +208,18 @@ main{
         flex-direction: column;
         gap: 10px;
     }
+    body {
+        overflow: hidden;
+      }
 }
 @media screen and (max-width: 500px){
     .filtercat{
         flex-direction: column;
         gap: 10px;
     }
+    body {
+        overflow: hidden;
+      }
 }
 @media (max-width: 480px) {
     .products-container {
@@ -247,4 +254,8 @@ main{
     .card-overlay button:hover {
         background-color: #1e6a2e;
     }
+    body {
+        overflow: hidden;
+      }
 }
+

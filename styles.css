@@ -183,7 +183,6 @@ main {
     display: flex;
     justify-content: center;
 }
-<<<<<<< HEAD
 
 .close {
     color: #a21919;
@@ -213,8 +212,6 @@ input[type="text"], input[type="password"] {
     align-items: center;
 }
 
-=======
->>>>>>> 030e13e52191e22fc3227b110cf40d341e6c6e64
 .products-container{
     display: flex;
     align-items: center;
@@ -298,26 +295,3 @@ input[type="text"], input[type="password"] {
 .card-overlay button:hover {
     background-color: #207733;
 }
-.cart-item-quantity {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cart-item-quantity button {
-    background-color: var(--emerald-color);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.cart-item-quantity button:hover {
-    background-color: #207733;
-}
-
-.cart-item-quantity .quantity {
-    font-size: 16px;
-}
-
