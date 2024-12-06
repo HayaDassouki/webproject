@@ -48,9 +48,10 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     background-color: var(--emerald-color);
 }
-#covertxt button a{
+#covertxt a button{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 #covertxt button:hover{
     transform: scale(1.04);

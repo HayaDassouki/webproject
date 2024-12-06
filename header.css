@@ -69,6 +69,7 @@ nav ul li a:hover::after {
     background-color: transparent;
     border: none;
     width: 30px;
+    cursor:pointer;
 }
 .head{color: white;}
 .head:hover{

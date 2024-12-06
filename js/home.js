@@ -38,30 +38,10 @@ updateButtons();
 let cart = [];
 let products = [];
 
-function updateCartDisplay() {
-  if (isLoggedIn == true) {
-    $("#cart-item").show();
-    updateCartItems();
-  } else {
-    $("#cart-item").hide();
-  }
-}
-
-let modal = document.getElementById("loginModal");
-
-$("#loginModal form").submit(function (event) {
-  event.preventDefault();
-  isLoggedIn = true;
-  modal.style.display = "none";
-  updateCartDisplay();
-});
-function logout() {
-  isLoggedIn = false;
-  updateCartDisplay();
-  modal.style.display = "none";
-}
 
 function updateCartItems() {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
   $("#cart-items").empty();
   if (cartItems === 0) {
     $("#cart-items").hide();
@@ -102,6 +82,33 @@ $(document).on("click", ".increase-btn", function () {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
   renderCart();
 });
+
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+function addItemToStore(id) {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+  if (!cartItems) {
+    cartItems = {
+      [id]: 1,
+    };
+  } else {
+    if (id in cartItems) {
+      cartItems[id] += 1;
+    } else {
+      cartItems[id] = 1;
+    }
+  }
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  console.log("id", id), console.log("cartItems", cartItems);
+}
+
 
 function renderCart() {
   let cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -151,7 +158,6 @@ $(document).ready(function () {
     window.location.href = "index.html";
   });
 
-
   fetch("products.json")
     .then((response) => {
       if (!response.ok) {
@@ -163,6 +169,7 @@ $(document).ready(function () {
       let selectedProducts = data.filter((product) =>
         [3, 4, 30].includes(product.id)
       );
+      products = selectedProducts;
       displayProducts(selectedProducts);
     })
     .catch((error) => {
