@@ -14,7 +14,6 @@ main{
 #cover{
     background-image: url(images/shopimgs/shopcover.jpg);
     height: 400px;
-     width: 100%;
     background-repeat: no-repeat;
     background-size: cover; 
     background-position-x:center;
@@ -208,20 +207,85 @@ main{
         flex-direction: column;
         gap: 10px;
     }
-    body {
-        overflow: hidden;
-      }
 }
 @media screen and (max-width: 500px){
     .filtercat{
         flex-direction: column;
         gap: 10px;
     }
-    body {
-        overflow: hidden;
-      }
 }
 @media (max-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .products-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    .product-card {
+        width: 90%;
+        height: auto;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    .product-card img {
+        height: auto;
+        object-fit: contain;
+    }
+    .card-img-container h3 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    .card-overlay h3 {
+        font-size: 18px;
+    }
+    .card-overlay .price {
+        font-size: 14px;
+    }
+    .card-overlay button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .card-overlay button:hover {
+        background-color: #1e6a2e;
+    }.filters, .products-container, .searching {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .filtercat, .filtertype {
+        align-items: center;
+    }
+    .product-card {
+        margin: 0 auto;
+    }
+    #covertxt {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #search {
+        width: 90%; 
+    }
+    .searching{
+        flex-direction: row;
+    }
+}
+@media (max-width: 370px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .products-container {
         flex-direction: column;
         gap: 15px;
@@ -254,8 +318,34 @@ main{
     .card-overlay button:hover {
         background-color: #1e6a2e;
     }
-    body {
-        overflow: hidden;
-      }
+    .filters, .products-container, .searching {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .filtercat, .filtertype {
+        align-items: center;
+    }
+    .product-card {
+        margin: 0 auto;
+    }
+    #covertxt {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #search {
+        width: 90%;
+    }
+    .searching{
+        flex-direction: row;
+    }
 }
+
+
+
 
