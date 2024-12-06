@@ -1,23 +1,24 @@
 $(document)
   .ready(function () {
-    $("#cart-container").hide();
-    let products = [];
+    $("#cart-container").hide()
+    $("#checkout").hide()
+    let products = []
     fetch("products.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json();
+        return response.json()
       })
       .then((data) => {
         products = data;
-        displayProducts(products);
+        displayProducts(products)
       })
       .catch((error) => {
-        console.error("Error:", error);
+        console.error("Error:", error)
       });
     function displayProducts(filteredProducts) {
-      $("#products-container").empty();
+      $("#products-container").empty()
       if (filteredProducts.length === 0) {
       } else {
         filteredProducts.forEach((product) => {
@@ -31,112 +32,112 @@ $(document)
                           <p class="price">Price: $${product.price}</p>
                           <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
                       </div>
-                  </div>`;
-          $("#products-container").append(productCard);
-        });
+                  </div>`
+          $("#products-container").append(productCard)
+        })
       }
     }
     $("#search").on("input", function () {
-      let query = $(this).val().toLowerCase();
+      let query = $(this).val().toLowerCase()
       let filteredProducts = products.filter((product) =>
         product.name.toLowerCase().includes(query)
-      );
-      displayProducts(filteredProducts);
-    });
+      )
+      displayProducts(filteredProducts)
+    })
     $(".filtercat .filter-btn").on("click", function () {
-      let selectedCategory = $(this).data("category");
+      let selectedCategory = $(this).data("category")
       let selectedType =
-        $(".filtertype .filter-btn.selected").data("type") || "all";
-      $(".filtercat .filter-btn").removeClass("selected");
-      $(this).addClass("selected");
-      filterProducts(selectedCategory, selectedType);
-    });
+        $(".filtertype .filter-btn.selected").data("type") || "all"
+      $(".filtercat .filter-btn").removeClass("selected")
+      $(this).addClass("selected")
+      filterProducts(selectedCategory, selectedType)
+    })
     $(".filtertype .filter-btn").on("click", function () {
-      let selectedType = $(this).data("type");
+      let selectedType = $(this).data("type")
       let selectedCategory =
-        $(".filtercat .filter-btn.selected").data("category") || "all";
-      $(".filtertype .filter-btn").removeClass("selected");
-      $(this).addClass("selected");
-      filterProducts(selectedCategory, selectedType);
-    });
-    function filterProducts(category, type) {
-      let filteredProducts = products;
-      if (category !== "all") {
+        $(".filtercat .filter-btn.selected").data("category") || "all"
+      $(".filtertype .filter-btn").removeClass("selected")
+      $(this).addClass("selected")
+      filterProducts(selectedCategory, selectedType)
+    })
+    function filterProducts(category, type){
+      let filteredProducts = products
+      if (category !== "all"){
         filteredProducts = filteredProducts.filter(
           (product) => product.category === category
-        );
+        )
       }
-      if (type !== "all") {
+      if (type !== "all"){
         filteredProducts = filteredProducts.filter(
           (product) => product.type === type
-        );
+        )
       }
-      displayProducts(filteredProducts);
+      displayProducts(filteredProducts)
     }
 
     function addItemToStore(id) {
-      let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+      let cartItems = JSON.parse(localStorage.getItem("cartItems"))
 
       if (!cartItems) {
         cartItems = {
           [id]: 1,
-        };
+        }
       } else {
         if (id in cartItems) {
-          cartItems[id] += 1;
+          cartItems[id] += 1
         } else {
-          cartItems[id] = 1;
+          cartItems[id] = 1
         }
       }
 
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-      console.log("id", id), console.log("cartItems", cartItems);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems))
     }
 
     $(document).on("click", ".add-to-cart", function () {
-      let productId = $(this).data("id");
+      let productId = $(this).data("id")
 
-      addItemToStore(productId);
+      addItemToStore(productId)
 
-      let product = products.find((p) => p.id === productId);
+      let product = products.find((p) => p.id === productId)
 
       if (product) {
-        let cartItem = cart.find((item) => item.id === productId);
+        let cartItem = cart.find((item) => item.id === productId)
         if (cartItem) {
-          cartItem.quantity += 1;
+          cartItem.quantity += 1
         } else {
-          cart.push({ ...product, quantity: 1 });
+          cart.push({ ...product, quantity: 1 })
         }
-        updateCartDisplay();
+        updateCartDisplay()
       }
-    });
+    })
 
-    let cart = [];
+    let cart = []
     function addToCart(product) {
-      cart.push(product);
-      updateCartDisplay();
+      cart.push(product)
+      updateCartDisplay()
     }
-    $("#cartisempty").html("<h3>Your cart is empty!</h3>");
+    $("#cartisempty").html("<h3>Your cart is empty!</h3>")
     function updateCartDisplay() {
-      $("#cart-container").empty();
-      $("#cartisempty").show();
-      $("#cartisempty").html("<h3>Your cart is empty!</h3>");
-      $("#yourItems").hide();
+      $("#cart-container").empty()
+      $("#cartisempty").show()
+      $("#cartisempty").html("<h3>Your cart is empty!</h3>")
+      $("#yourItems").hide()
+      $("#checkout").hide()
       if (cart.length === 0) {
         $("#cartisempty").css({
           color: "white",
           "align-items": "center",
-        });
-        $("#cart-container").hide();
+        })
+        $("#cart-container").hide()
       } else {
-        $("#yourItems").show();
-        $("#cartisempty").hide();
-        $("#yourItems").html("<h3>Your Items</h3>");
+        $("#checkout").show()
+        $("#yourItems").show()
+        $("#cartisempty").hide()
+        $("#yourItems").html("<h3>Your Items</h3>")
         $("#yourItems").css({
           color: "white",
-        });
-        $("#cart-container").show();
+        })
+        $("#cart-container").show()
         cart.forEach((product) => {
           $("#cart-container").append(`
           <div>
@@ -159,57 +160,60 @@ $(document)
                           product.id
                         }"><span class="material-icons">delete</span></button>
           </div>
-        `);
-        });
+        `)
+        })
       }
     }
     $(document).on("click", ".increase-qty", function () {
-      let productId = $(this).data("id");
-      let cartItem = cart.find((item) => item.id === productId);
+      let productId = $(this).data("id")
+      let cartItem = cart.find((item) => item.id === productId)
       if (cartItem) {
-        cartItem.quantity += 1;
-        updateCartDisplay();
+        cartItem.quantity += 1
+        updateCartDisplay()
       }
     });
     $(document).on("click", ".decrease-qty", function () {
       let productId = $(this).data("id");
-      let cartItem = cart.find((item) => item.id === productId);
+      let cartItem = cart.find((item) => item.id === productId)
 
       if (cartItem) {
-        cartItem.quantity -= 1;
+        cartItem.quantity -= 1
         if (cartItem.quantity <= 0) {
-          cart = cart.filter((item) => item.id !== productId);
+          cart = cart.filter((item) => item.id !== productId)
         }
-        updateCartDisplay();
+        updateCartDisplay()
       }
-    });
+    })
     $(document).on("click", ".remove-item", function () {
-      let productId = $(this).data("id");
-      cart = cart.filter((item) => item.id !== productId);
+      let productId = $(this).data("id")
+      cart = cart.filter((item) => item.id !== productId)
       updateCartDisplay();
-    });
+    })
 
     $("#cartbtn").click(function () {
-      $(".thecart").fadeIn();
+      $(".thecart").fadeIn()
       $(".thecart").css({
         display: "flex",
         "justify-content": "center",
         "align-items": "center",
         "text-align": "center",
-      });
-    });
+      })
+    })
     $(".closeCart").on("click", function () {
-      $(".thecart").fadeOut();
-    });
+      $(".thecart").fadeOut()
+    })
     $(window).click(function (e) {
       if ($(e.target).is(".thecart")) {
-        $(".thecart").fadeOut();
+        $(".thecart").fadeOut()
       }
-    });
+    })
+    $("#checkoutbtn").on("click", function(){
+      alert("Proceeding to checkout...")
+    })
   })
   .catch((error) => {
-    console.error("Error fetching products:", error);
-  });
+    console.error("Error fetching products:", error)
+  })
 
   
 

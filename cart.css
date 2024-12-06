@@ -11,17 +11,6 @@
     align-items: center; 
     text-align: center;
 }
-#cart-container {
-    padding: 30px;
-    max-height: 500px;
-    overflow-y: auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    color: black;
-    margin: 10px;
-    width: 100%;
-}
 #cart{
     background-color: var(--emerald-color);
     color: white;
@@ -35,14 +24,46 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;  
     align-items: center;
     overflow: hidden;
     gap: 20px;
     overflow: hidden;
     scrollbar-width: thin; 
 }
-.closeCart {
+#cart-container {
+    padding: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    margin: 10px;
+    width: 100%;
+}
+#checkout{
+    width: 100%;
+    text-align: center;
+}
+#checkoutbtn{
+    background-color: white;
+    color: var(--emerald-color);
+    font-size: 18px;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+#checkoutbtn:hover{
+    background-color: #546450e8;
+    color: white;
+}
+.closeCart{
     color: white;
     font-size: 28px;
     font-weight: bold;
@@ -136,7 +157,7 @@
         padding: 20px;
     }
     #cart-container {
-        max-height: 400px;
+        max-height: 300px;
         justify-content: center;
         align-items: center;
     }
@@ -197,6 +218,10 @@
         justify-content: center;
         align-items: center;
     }
+    #checkoutbtn{
+        font-size: 17px;
+        padding: 4px 6px;
+    }
     .cart-item {
         padding: 8px;
         font-size: 12px;
@@ -243,25 +268,32 @@
     }
 }
 @media (max-width: 300px) {
-    #cart {
+    #cart{
         min-width: 150px;
         max-width: 200px;
         max-height: 300px;
         padding: 10px;
     }
-    .cart-item {
+    #cart-container{
+        max-height: 100px;
+    }
+    #checkoutbtn{
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+    .cart-item{
         font-size: 8px; 
     }
-    .cart-item img {
+    .cart-item img{
         width: 25px; 
         height: 25px;
     }
-    .remove-item {
+    .remove-item{
         font-size: 7px;
         flex-shrink: 1;
         margin-left: 0px;
     }
-    .closeCart {
+    .closeCart{
         font-size: 18px; 
     }
 }

@@ -56,15 +56,18 @@ h1{
     display: flex;
     gap: 10px;
 }
-input, textarea, #subbtn{
+input, textarea, #subbtn, #form input{
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 5px;
+    border: 1px solid var(--emerald-color); 
+    outline: none;
 }
-#email{
-    border: 1px solid rgba(0, 0, 0, 0.315);
+input:focus, textarea:focus, #form input:focus{
+    border-color: rgb(54, 88, 54); 
+    box-shadow: 0 0 5px rgb(54, 88, 54); 
 }
 #subbtn{
     background-color: var(--emerald-color);

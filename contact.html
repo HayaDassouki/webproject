@@ -71,7 +71,7 @@
             <h2>We’re always happy to assist!</h2>
             <div id="sec1">
                 <div class="form">
-                    <form action="#" method="post">
+                    <form action="#" method="post" id="toreset">
                         <div id="form">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                             <input type="text" id="num" name="num" placeholder="Your Number">
@@ -135,8 +135,11 @@
                 <div id="yourItems"></div>
                 <div id="cartisempty"></div>
                 <div>
-                    <div id="cart-container"></div>
+                    <div id="cart-container">
+                    </div>
                     <span class="closeCart">&times;</span>
+                    <span id="checkout" >
+                        <button id="checkoutbtn">Checkout</button></span>
                 </div>
             </div>
         </section>
