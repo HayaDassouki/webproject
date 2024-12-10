@@ -90,7 +90,7 @@ input:focus, textarea:focus, #form input:focus{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     box-shadow:  10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 .modalmsg{
@@ -205,5 +205,10 @@ input:focus, textarea:focus, #form input:focus{
         align-items: center;
     }
 }
-
+.error{
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 10px;
+}
 
