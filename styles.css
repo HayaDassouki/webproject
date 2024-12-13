@@ -143,16 +143,29 @@ main {
 
 .section {
     padding: 20px;
-    background-color: #fff;
     margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .controls {
-    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+.controls:hover {
+    background-color: rgb(96, 142, 72);
+    transform: translateY(-2px);
+  }
 .add-btn {
     background-color: rgb(8, 46, 8);
     color: white;
@@ -164,21 +177,20 @@ main {
     border-radius: 5px;
 }
 
- #prevBtn:hover {
-    background-color: green;
-}
-#nextBtn:hover {
-    background-color: green;
-}
+
 .tes{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .box{
-    max-width: 300px;
+    width: 250px;
+    max-width: 500px;
     background-color: var(--emerald-color);
-    color: var(--emerald-color);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
 }
 .Test h2{
     display: flex;
